@@ -1,0 +1,10 @@
+.pnpm-store/
+node_modules/
+*.db
+*.mp4
+demo-edit/
+.docs/
+.env
+.env.*
+.wrangler/
+backend/.owner-key

@@ -1,0 +1,14 @@
+{
+  "tool": "check_payment",
+  "arguments": {
+    "wallet": "0x1111111111111111111111111111111111111111",
+    "payment_key": "demo-invoice-42",
+    "payment": {
+      "kind": "usdc_transfer",
+      "recipient": "0x2222222222222222222222222222222222222222",
+      "amount_usdc": "5"
+    },
+    "dry_run": true,
+    "simulate": "delayed_settlement"
+  }
+}

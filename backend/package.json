@@ -1,0 +1,17 @@
+{
+  "name": "spendguard-backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.11.0",
+  "scripts": {
+    "test": "node --import ../my-plugin/node_modules/tsx/dist/loader.mjs --test test/*.test.ts",
+    "dev": "node --import ../my-plugin/node_modules/tsx/dist/loader.mjs local/server.ts",
+    "build": "../my-plugin/node_modules/.bin/esbuild src/index.ts --bundle --format=esm --platform=browser --conditions=workerd,worker,browser --target=es2022 --minify --outfile=dist/worker.js",
+    "deploy": "pnpm build && bash scripts/deploy.sh"
+  },
+  "dependencies": {
+    "viem": "2.51.3",
+    "zod": "4.4.3"
+  }
+}
